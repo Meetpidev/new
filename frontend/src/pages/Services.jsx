@@ -59,7 +59,7 @@ const Services = () => {
       icon: Dumbbell,
       title: 'Personal Training',
       description: 'AI-powered workout plans tailored to your fitness level and goals',
-      price: '$49/month',
+      // price: '$49/month',
       features: [
         'Custom workout plans',
         'Progress tracking',
@@ -71,7 +71,7 @@ const Services = () => {
       icon: Utensils,
       title: 'Nutrition Planning',
       description: 'Personalized meal plans and nutritional guidance',
-      price: '$39/month',
+      //price: '$39/month',
       features: [
         'Custom meal plans',
         'Grocery lists',
@@ -83,7 +83,7 @@ const Services = () => {
       icon: Meditation,
       title: 'Mental Wellness',
       description: 'Guided meditation and stress management techniques',
-      price: '$29/month',
+      //price: '$29/month',
       features: [
         'Guided meditation',
         'Stress tracking',
@@ -181,7 +181,7 @@ const Services = () => {
                     </motion.div>
                     <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                     <p className="text-gray-600 mb-6">{service.description}</p>
-                    <p className="text-3xl font-bold text-indigo-600 mb-6">{service.price}- Basic </p>
+                    <p className="text-3xl font-bold text-indigo-600 mb-6">{service.price}</p>
                     <ul className="space-y-3 mb-8">
                       {service.features.map((feature, featureIndex) => (
                         <motion.li

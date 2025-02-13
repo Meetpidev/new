@@ -185,14 +185,14 @@ const Profile = () => (
               <Mail className="w-5 h-5 text-gray-400" />
               <div>
                 <p className="text-sm text-gray-500">Email</p>
-                <p className="font-medium">user@example.com</p>
+                <p className="font-medium">{localStorage.getItem('email') }</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">
               <Phone className="w-5 h-5 text-gray-400" />
               <div>
                 <p className="text-sm text-gray-500">Phone</p>
-                <p className="font-medium">+1 (555) 123-4567</p>
+                <p className="font-medium">{localStorage.getItem('phone') }</p>
               </div>
             </div>
           </div>
@@ -201,7 +201,7 @@ const Profile = () => (
               <MapPin className="w-5 h-5 text-gray-400" />
               <div>
                 <p className="text-sm text-gray-500">Location</p>
-                <p className="font-medium">New York, USA</p>
+                <p className="font-medium">{localStorage.getItem('address') }</p>
               </div>
             </div>
             <div className="flex items-center space-x-4">

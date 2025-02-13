@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:4000/api/doctors';
+const API_URL = 'https://vitality-ais.onrender.com/api/doctors';
 
 const getDoctors = async () => {
   try {

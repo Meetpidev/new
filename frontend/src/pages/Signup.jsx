@@ -25,8 +25,10 @@ const Signup = () => {
       console.log('Signup successful');
       localStorage.setItem("name", name);
       localStorage.setItem("email", email);
+      localStorage.setItem("phone", phone);
+      localStorage.setItem("address", address);
 
-      navigate('/'); 
+      navigate('/login'); 
     } catch (error) {
       console.error('Signup failed:', error);
       alert('Signup failed. Please check your information and try again.');
@@ -34,7 +36,7 @@ const Signup = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-500 mt-[2rem]">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-blue-500 to-purple-500 mt-[2rem]">
       <motion.div
         className="bg-white p-8 rounded-lg shadow-lg w-96"
         initial={{ opacity: 0, y: -50 }}
@@ -105,8 +107,10 @@ const Signup = () => {
           </div>
           <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition duration-200">Signup</button>
         </form>
-
       </motion.div>
+      <p>
+        Already have an account? <a href="/login" className="text-blue-600 hover:text-blue-700">Login</a>
+      </p>
     </div>
   );
 };
