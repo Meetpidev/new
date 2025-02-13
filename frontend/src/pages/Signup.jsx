@@ -109,7 +109,7 @@ const Signup = () => {
         </form>
       </motion.div>
       <p>
-        Already have an account? <a href="/login" className="text-blue-600 hover:text-blue-700">Login</a>
+        Already have an account? <a href="/login" className="text-black-600 hover:text-green-700">Login</a>
       </p>
     </div>
   );
