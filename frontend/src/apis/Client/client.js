@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // const API_URL = 'https://vitality-ais.onrender.com/api/clients';
-const API_URL = 'http://localhost:4000/api/clients';
+const API_URL = 'https://vitality-ais.onrender.com/api/clients';
 
 const registerClient = async (clientData) => {
   try {
