@@ -37,11 +37,11 @@ const Fitness = () => {
         }
         setError("");
         setSubmitted(true);
-        generateDummyData();
+        DummyData();
     };
 
-    const generateDummyData = () => {
-        // Dummy data for Height and Weight
+    const DummyData = () => {
+   
         const heightWeight = {
             labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
             datasets: [
@@ -84,7 +84,7 @@ const Fitness = () => {
     const handleReset = () => {
         setFormData(initialFormData);
         setSubmitted(false);
-        setHeightWeightData(null); // Reset chart data too
+        setHeightWeightData(null); 
         setStepTimeData(null);
         setStandTargetData(null)
     };
