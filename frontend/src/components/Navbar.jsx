@@ -30,7 +30,6 @@ const Navbar = () => {
     { path: '/', label: 'Home' },
     { path: '/services', label: 'Services' },
     { path: '/about', label: 'About' },
-    { path: '/add-doctor', label: 'Add Doctor' },
     { path: '/contact', label: 'Contact' },
     {
       path: userInitial ? null : '/signup',
@@ -43,6 +42,7 @@ const Navbar = () => {
   const dropdownOptions = [
     { path: '/dashboard', label: 'Profile', icon: <User className="mr-2" /> },
     { path: '/fitness', label: 'Fitness', icon: <Dumbbell className="mr-2" /> },
+    { path: '/add-doctor', label: 'Add Doctor', icon: <User className="mr-2" /> },
     { path: '/settings', label: 'Settings', icon: <Settings className="mr-2" /> },
     {
       label: 'Logout',
