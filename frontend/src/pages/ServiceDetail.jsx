@@ -41,7 +41,7 @@ const ServiceDetails = () => {
         </div>
       </motion.div>
 
-      {/* Additional Content Section */}
+      
       <motion.div
   initial={{ opacity: 0, y: 50 }}
   animate={{ opacity: 1, y: 0 }}
@@ -85,7 +85,7 @@ const ServiceDetails = () => {
       </p>
     </div>
 
-    {/* Card for Recovery and Rehabilitation */}
+    {/* Card for Recovery  */}
     <div className="bg-white rounded-lg shadow-lg p-6">
       <img 
         src="https://media.istockphoto.com/id/1418999467/photo/doctors-comforting-disabled-elderly-patient.jpg?s=612x612&w=0&k=20&c=PvZiWjS5kZ4MeHMVNd5DTyHKuohqh7gUyQGfpFu9Lr4=" 

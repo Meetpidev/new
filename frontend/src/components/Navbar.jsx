@@ -22,8 +22,8 @@ const Navbar = () => {
   const handleLogout = () => {
     console.log("Logout");
     localStorage.clear();
-    setUserInitial(''); // Clear user initial state
-    navigate('/login'); // Redirect to login page
+    setUserInitial(''); 
+    navigate('/login'); 
   };
 
   const navItems = [
@@ -36,9 +36,9 @@ const Navbar = () => {
       label: userInitial ? null : 'Signup',
       onClick: null,
     },
-  ];
+  ]
 
-  // Dropdown options
+  
   const dropdownOptions = [
     { path: '/dashboard', label: 'Profile', icon: <User className="mr-2" /> },
     { path: '/fitness', label: 'Fitness', icon: <Dumbbell className="mr-2" /> },
@@ -111,11 +111,11 @@ const Navbar = () => {
   {dropdownOptions.map((option) => (
     <MenuItem key={option.path} onClick={() => {
       if (option.onClick) {
-        option.onClick(); // Call the logout function if it exists
+        option.onClick(); 
       }
-      popupState.close(); // Close the dropdown menu
+      popupState.close(); 
     }}>
-      {/* Render icon and label */}
+     
       <div className="flex items-center">
         {option.icon}
         {option.path ? (

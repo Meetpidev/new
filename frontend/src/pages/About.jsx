@@ -90,7 +90,7 @@ const About = () => {
         </div>
       </motion.section>
 
-      {/* Problem Statement Section */}
+      {/* Problem Statement*/}
       <motion.section 
         ref={problemRef}
         initial={{ opacity: 0 }}

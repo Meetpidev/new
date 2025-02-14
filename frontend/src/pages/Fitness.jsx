@@ -61,24 +61,25 @@ const Fitness = () => {
                 },
             ],
         };
-        // Dummy data for Recharts
-        const rechartsHeightWeightData = Array.from({ length: 12 }, (_, i) => ({
+
+        // Dummy data 
+        const HeightWeight = Array.from({ length: 12 }, (_, i) => ({
             month: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][i],
             height: formData.height + Math.random() * 5 - 2.5,
             weight: formData.weight + Math.random() * 3 - 1.5,
         }));
-        const rechartsStepTimeData = Array.from({ length: 12 }, (_, i) => ({
+        const StepTime = Array.from({ length: 12 }, (_, i) => ({
             month: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][i],
             steps: formData.targetStep + Math.random() * 500 - 250,
             time: formData.targetTime + Math.random() * 3 - 1.5,
         }));
-        const rechartsStandTargetData = Array.from({ length: 12 }, (_, i) => ({
+        const StandTarget = Array.from({ length: 12 }, (_, i) => ({
             month: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][i],
             standTarget: formData.standTarget + Math.random() * 5 - 2.5,
         }));
-        setHeightWeightData(rechartsHeightWeightData);
-        setStepTimeData(rechartsStepTimeData);
-        setStandTargetData(rechartsStandTargetData)
+        setHeightWeightData(HeightWeight);
+        setStepTimeData(StepTime);
+        setStandTargetData(StandTarget)
     };
 
     const handleReset = () => {

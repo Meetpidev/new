@@ -145,11 +145,11 @@ const Home = () => {
   className="py-20 bg-gradient-to-b from-gray-100 via-gray-50 to-white"
 >
   <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    {/* Background Decoration */}
+  
     <div className="absolute top-0 left-0 w-1/3 h-full bg-gradient-to-b from-indigo-50 via-indigo-100 to-transparent opacity-50 rounded-full blur-3xl"></div>
     <div className="absolute bottom-0 right-0 w-1/4 h-1/2 bg-gradient-to-t from-indigo-50 via-indigo-100 to-transparent opacity-50 rounded-full blur-3xl"></div>
 
-    {/* Text Content */}
+  
     <div className="relative text-center mb-12">
   <h2 className="text-3xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-purple-500 leading-tight">
     Our Growing Community
@@ -172,14 +172,14 @@ const Home = () => {
     >
       <ResponsiveContainer width="100%" height="100%">
         <AreaChart data={data}>
-          {/* Gradient Definition */}
+       
           <defs>
             <linearGradient id="colorUsers" x1="0" y1="0" x2="0" y2="1">
               <stop offset="5%" stopColor="#4F46E5" stopOpacity={0.8} />
               <stop offset="95%" stopColor="#4F46E5" stopOpacity={0} />
             </linearGradient>
           </defs>
-          {/* Chart Elements */}
+         
           <CartesianGrid strokeDasharray="3 3" strokeOpacity={0.2} />
           <XAxis
             dataKey="month"
@@ -215,7 +215,7 @@ const Home = () => {
 </motion.section>
 
 
-      {/* CTA Section */}
+   
       <section className="py-20 bg-indigo-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div

@@ -51,7 +51,7 @@ const Mental = () => {
   </h2>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    {/* Card for Our Approach */}
+    
     <div className="bg-white rounded-lg shadow-lg p-6">
       <img 
         src="https://www.rothwellgroup.com/wp-content/uploads/OurApproach_Page_JPEGmax.jpg" 
@@ -95,11 +95,7 @@ const Mental = () => {
   </div>
 </motion.div>
 
-
-
-
-
-      {/* Testimonials Section */}
+    
       <motion.div
   initial={{ opacity: 0, y: 50 }}
   animate={{ opacity: 1, y: 0 }}

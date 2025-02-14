@@ -31,9 +31,9 @@ import {
   Bar
 } from 'recharts';
 import { Link } from 'react-router-dom';
-import { getDoctors } from '../apis/Doctor/doctor.js'; // Import doctor service
+import { getDoctors } from '../apis/Doctor/doctor.js';
 
-// Sample data for charts
+
 const visitData = [
   { name: 'Mon', visits: 20 },
   { name: 'Tue', visits: 35 },
@@ -80,7 +80,6 @@ const Overview = () => (
       Welcome {localStorage.getItem('name')}
     </motion.h1>
 
-    {/* Stats Grid */}
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
       <Stats icon={Users} label="Total Visits" value="486" change={12} />
       <Stats icon={Target} label="Goals Completed" value="24" change={8} />
@@ -300,7 +299,7 @@ const Doctors = ({ doctors }) => (
           >
             <div className="flex items-center justify-between mb-2">
               <h4 className="text-md font-semibold">{doctor.name.firstName} {doctor.name.lastName}</h4>
-              {/* Assuming 'available' is a boolean field in your doctor object */}
+              
               {doctor.availability.avail ? (
                 <CheckCircle className="h-5 w-5 text-green-500" />
               ) : (
@@ -311,7 +310,7 @@ const Doctors = ({ doctors }) => (
             <p className="text-sm text-gray-600">Location: {doctor.location.city}, {doctor.location.state}</p>
             <p className="text-sm text-gray-600">Phone: {doctor.contact.phone}</p>
             <p className="text-sm text-gray-600">Email: {doctor.contact.email}</p>
-             {/* Take Appointment Button */}
+            
             <Link to={`/appointment/${doctor._id}`} className="inline-block mt-4 bg-indigo-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded">
               Take Appointment
             </Link>
@@ -326,7 +325,7 @@ const Doctors = ({ doctors }) => (
 
 const Dashboard = () => {
   const [activeTab, setActiveTab] = useState('overview');
-  const [doctors, setDoctors] = useState([]);  // State for doctors
+  const [doctors, setDoctors] = useState([]);  
 
   useEffect(() => {
     const fetchDoctors = async () => {
@@ -336,7 +335,6 @@ const Dashboard = () => {
         console.log(doctors)
       } catch (error) {
         console.error('Error fetching doctors:', error);
-        // Handle error appropriately (e.g., display an error message)
       }
     };
 
@@ -360,7 +358,7 @@ const Dashboard = () => {
     <div className="min-h-screen bg-gray-50 p-8 mt-[4rem]">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row gap-8">
-          {/* Left Sidebar */}
+         
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}

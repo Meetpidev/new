@@ -56,7 +56,7 @@ const AddDoctor = () => {
             setQualifications('');
             setDescription('');
             setFees(0); 
-            alert('Doctor created successfully!'); // Provide user feedback
+            alert('Doctor created successfully!'); 
         } catch (error) {
             console.error('Error creating doctor:', error);
             alert('Failed to add doctor. Please check the console for details.');
@@ -67,7 +67,7 @@ const AddDoctor = () => {
         <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="container mx-auto p-4 mt-16" // Added mt-16 to move content below fixed navbar
+            className="container mx-auto p-4 mt-16"
         >
             <motion.div className="bg-white p-8 rounded-lg shadow-md">
                 <h2 className="text-2xl font-bold text-center mb-6 text-gray-700">Add New Doctor</h2>
