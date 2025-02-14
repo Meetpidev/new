@@ -109,7 +109,7 @@ const Signup = () => {
         </form>
       </motion.div>
       <p>
-        Already have an account? <a href="/login" className="text-black-600 hover:text-green-700">Login</a>
+        Already have an account? <button onClick={() => navigate("/login")}>Login</button>
       </p>
     </div>
   );

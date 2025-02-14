@@ -14,6 +14,7 @@ import Dashboard from './components/Dashboard';
 import Signup from './pages/Signup';
 import AddDoctor from './pages/AddDoctor';
 import Login from "./pages/Login.jsx"
+import Fitness from './pages/Fitness.jsx';
 
 
 function App() {
@@ -34,6 +35,7 @@ function App() {
             <Route path="/services/mental-wellness" element={<Mental />} />
             <Route path="/payment" element={<Payment />} />
             <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/fitness" element={<Fitness />} /> 
             <Route path="/signup" element={<Signup />} />
             <Route path="/login" element={<Login />} />
           </Routes>

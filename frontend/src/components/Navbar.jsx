@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Brain, Menu, X } from 'lucide-react';
+import { Brain, X, User, Dumbbell, Settings, LogOut } from 'lucide-react';
 import { motion } from 'framer-motion';
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [userInitial, setUserInitial] = useState('');
-  const [dropdownOpen, setDropdownOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -15,12 +18,6 @@ const Navbar = () => {
       setUserInitial(name.charAt(0).toUpperCase());
     }
   }, []);
-
-  const handleUserInitialClick = () => {
-    if (userInitial) {
-      navigate('/dashboard');
-    }
-  };
 
   const handleLogout = () => {
     console.log("Logout");
@@ -35,7 +32,6 @@ const Navbar = () => {
     { path: '/about', label: 'About' },
     { path: '/add-doctor', label: 'Add Doctor' },
     { path: '/contact', label: 'Contact' },
-    // Only show Signup if userInitial is not present
     {
       path: userInitial ? null : '/signup',
       label: userInitial ? null : 'Signup',
@@ -45,12 +41,13 @@ const Navbar = () => {
 
   // Dropdown options
   const dropdownOptions = [
-    { path: '/dashboard', label: 'Your Profile' },
-    { path: '/fitness', label: 'Your Fitness' },
-    { path: '/settings', label: 'Settings' },
-    { 
-      label: 'Logout', 
-      onClick: handleLogout 
+    { path: '/dashboard', label: 'Profile', icon: <User className="mr-2" /> },
+    { path: '/fitness', label: 'Fitness', icon: <Dumbbell className="mr-2" /> },
+    { path: '/settings', label: 'Settings', icon: <Settings className="mr-2" /> },
+    {
+      label: 'Logout',
+      onClick: handleLogout,
+      icon: <LogOut className="mr-2" />,
     },
   ];
 
@@ -79,8 +76,8 @@ const Navbar = () => {
                   transition={{ delay: index * 0.1 }}
                   whileHover={{ y: -2 }}
                 >
-                  <Link 
-                    to={item.path} 
+                  <Link
+                    to={item.path}
                     className="hover:text-indigo-200 transition-colors"
                     onClick={item.onClick}
                   >
@@ -104,40 +101,37 @@ const Navbar = () => {
 
           {/* User Initial with Dropdown */}
           {userInitial && (
-            <div className="relative text-left">
-              <div>
-                <button
-                  type="button"
-                  onMouseEnter={() => setDropdownOpen(true)}
-                  onMouseLeave={() => setDropdownOpen(false)}
-                  className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-indigo-600 text-sm font-medium text-white hover:bg-indigo-700 focus:outline-none"
-                >
-                  {userInitial}
-                </button>
-              </div>
-
-              {/* Dropdown Menu */}
-              {dropdownOpen && (
-                <div
-                  onMouseEnter={() => setDropdownOpen(true)}
-                  onMouseLeave={() => setDropdownOpen(false)}
-                  className="absolute right-0 z-10 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5"
-                >
-                  <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                    {dropdownOptions.map((option) => (
-                      <Link
-                        key={option.path}
-                        to={option.path}
-                        onClick={option.onClick}
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-indigo-100"
-                      >
-                        {option.label}
-                      </Link>
-                    ))}
-                  </div>
-                </div>
+            <PopupState variant="popover" popupId="user-menu-popup">
+              {(popupState) => (
+                <>
+                  <Button variant="contained" {...bindTrigger(popupState)} className="bg-indigo-600 text-white">
+                    {userInitial}
+                  </Button>
+                  <Menu {...bindMenu(popupState)}>
+  {dropdownOptions.map((option) => (
+    <MenuItem key={option.path} onClick={() => {
+      if (option.onClick) {
+        option.onClick(); // Call the logout function if it exists
+      }
+      popupState.close(); // Close the dropdown menu
+    }}>
+      {/* Render icon and label */}
+      <div className="flex items-center">
+        {option.icon}
+        {option.path ? (
+          <Link to={option.path} className="text-gray-700 hover:bg-indigo-100 w-full block text-left">
+            {option.label}
+          </Link>
+        ) : (
+          <span>{option.label}</span>
+        )}
+      </div>
+    </MenuItem>
+  ))}
+</Menu>
+                </>
               )}
-            </div>
+            </PopupState>
           )}
         </div>
 

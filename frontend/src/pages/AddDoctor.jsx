@@ -179,7 +179,7 @@ const AddDoctor = () => {
                             value={description}
                             onChange={(e) => setDescription(e.target.value)}
                             required
-                            className="mt-1 block w-full border-gray-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                            className="mt-1 block w-full border-black-300 rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                         />
                     </div>
                     <div>
