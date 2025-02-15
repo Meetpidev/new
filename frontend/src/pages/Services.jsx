@@ -93,7 +93,7 @@ const Services = () => {
     },
     {
       icon: Dumbbell,
-      title: 'AI-based reminders for: Vaccinations, Annual health check-ups.',
+      title: 'AI-based-reminders',
       description: 'AI-based reminders for: Vaccinations, Annual health check-ups.',
       // price: '$49/month',
       features: [
@@ -105,7 +105,7 @@ const Services = () => {
     },
     {
       icon: Utensils,
-      title: 'AI translator for varid languages',
+      title: 'AI-Doctor-Assistant',
       description: 'AI translator for varid languages - for user to give in their native language and we will also give results in many language option feature',
       //price: '$39/month',
       features: [
@@ -153,7 +153,7 @@ const Services = () => {
     },
     {
       icon: Meditation,
-      title: 'AI chatbot with empathy-driven conversations',
+      title: 'Medical-Report-Based-Disease-Checking',
       description: 'AI chatbot with empathy-driven conversations',
       //price: '$29/month',
       features: [
