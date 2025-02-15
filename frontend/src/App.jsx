@@ -19,6 +19,9 @@ import Excercise from './pages/HandExcercise.jsx';
 import HealthScore from './pages/HealthScore.jsx';
 import EmotionDetection from './pages/EmotionDetection.jsx';
 import DoctorSearch from './pages/DoctorSearch.jsx';
+import DoctorAssistant from './pages/DoctorAssistant.jsx';
+import Reminders from './pages/Reminders.jsx';
+import Report from './pages/Report.jsx';
 
 
 function App() {
@@ -41,6 +44,9 @@ function App() {
             <Route path="/services/Health-Score-Predictor" element={<HealthScore />}/>
             <Route path="/services/Emotion-detection" element={<EmotionDetection/>}/>
             <Route path="/services/Search-for-Doctor" element={<DoctorSearch/>}/>
+            <Route path="/services/AI-Doctor-Assistant" element={<DoctorAssistant />} />
+            <Route path="/services/AI-based-reminders" element={<Reminders/>} />
+            <Route path="/services/Medical-Report-Based-Disease-Checking" element={<Report/>}/>
             <Route path="/payment" element={<Payment />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/fitness" element={<Fitness />} /> 
