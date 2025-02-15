@@ -56,9 +56,45 @@ const Services = () => {
 
   const services = [
     {
+      icon: Meditation,
+      title: 'Emotion-detection',
+      description: 'Emotion detection - face & voice/speech also to add logic for frequent changes',
+      //price: '$29/month',
+      features: [
+        'Guided meditation',
+        'Stress tracking',
+        'Mood analysis',
+        'Sleep optimization',
+      ],
+    },
+    {
+      icon: Meditation,
+      title: 'Hand-Excercise',
+      description: 'Hand Excersice detection & feedback',
+      //price: '$29/month',
+      features: [
+        'Guided meditation',
+        'Stress tracking',
+        'Mood analysis',
+        'Sleep optimization',
+      ],
+    },
+    {
+      icon: Meditation,
+      title: 'Search-for-Doctor',
+      description: 'Search Doctor',
+      //price: '$29/month',
+      features: [
+        'Guided meditation',
+        'Stress tracking',
+        'Mood analysis',
+        'Sleep optimization',
+      ],
+    },
+    {
       icon: Dumbbell,
-      title: 'Personal Training',
-      description: 'AI-powered workout plans tailored to your fitness level and goals',
+      title: 'AI-based reminders for: Vaccinations, Annual health check-ups.',
+      description: 'AI-based reminders for: Vaccinations, Annual health check-ups.',
       // price: '$49/month',
       features: [
         'Custom workout plans',
@@ -69,8 +105,8 @@ const Services = () => {
     },
     {
       icon: Utensils,
-      title: 'Nutrition Planning',
-      description: 'Personalized meal plans and nutritional guidance',
+      title: 'AI translator for varid languages',
+      description: 'AI translator for varid languages - for user to give in their native language and we will also give results in many language option feature',
       //price: '$39/month',
       features: [
         'Custom meal plans',
@@ -81,8 +117,44 @@ const Services = () => {
     },
     {
       icon: Meditation,
-      title: 'Mental Wellness',
-      description: 'Guided meditation and stress management techniques',
+      title: 'Health-Score-Predictor',
+      description: ' self-reported data (sleep hours, diet logs, exercise routines) and outputs a health score model with suggestion feature',
+      //price: '$29/month',
+      features: [
+        'Guided meditation',
+        'Stress tracking',
+        'Mood analysis',
+        'Sleep optimization',
+      ],
+    },
+    {
+      icon: Meditation,
+      title: 'Sysmptom Checker for various disease',
+      description: 'Sysmptom Checker for various disease',
+      //price: '$29/month',
+      features: [
+        'Guided meditation',
+        'Stress tracking',
+        'Mood analysis',
+        'Sleep optimization',
+      ],
+    },
+    {
+      icon: Meditation,
+      title: 'Mood Tracking',
+      description: 'other full body excercise detection and Mood Tracking',
+      //price: '$29/month',
+      features: [
+        'Guided meditation',
+        'Stress tracking',
+        'Mood analysis',
+        'Sleep optimization',
+      ],
+    },
+    {
+      icon: Meditation,
+      title: 'AI chatbot with empathy-driven conversations',
+      description: 'AI chatbot with empathy-driven conversations',
       //price: '$29/month',
       features: [
         'Guided meditation',
@@ -178,7 +250,7 @@ const Services = () => {
                       className="w-16 h-16 bg-indigo-100 rounded-2xl flex items-center justify-center mb-6"
                     >
                       <service.icon className="h-8 w-8 text-indigo-600" />
-                    </motion.div>
+                    </motion.div> 
                     <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                     <p className="text-gray-600 mb-6">{service.description}</p>
                     <p className="text-3xl font-bold text-indigo-600 mb-6">{service.price}</p>
@@ -298,9 +370,9 @@ const Services = () => {
           <h2 className="text-3xl font-bold text-center mb-12">Success Metrics</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: Trophy, title: 'Success Rate', value: '92%' },
-              { icon: Users, title: 'Active Users', value: '50,000+' },
-              { icon: Zap, title: 'Goals Achieved', value: '150,000+' },
+              { icon: Trophy, title: 'Success Rate', value: '60%' },
+              { icon: Users, title: 'Active Users', value: '50+' },
+              { icon: Zap, title: 'Goals Achieved', value: '150+' },
             ].map((stat, index) => (
               <motion.div
                 key={stat.title}
