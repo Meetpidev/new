@@ -15,6 +15,10 @@ import Signup from './pages/Signup';
 import AddDoctor from './pages/AddDoctor';
 import Login from "./pages/Login.jsx"
 import Fitness from './pages/Fitness.jsx';
+import Excercise from './pages/HandExcercise.jsx';
+import HealthScore from './pages/HealthScore.jsx';
+import EmotionDetection from './pages/EmotionDetection.jsx';
+import DoctorSearch from './pages/DoctorSearch.jsx';
 
 
 function App() {
@@ -33,6 +37,10 @@ function App() {
             <Route path="/services/personal-training" element={<ServiceDetails />} />
             <Route path="/services/nutrition-planning" element={<Nutrition />} />
             <Route path="/services/mental-wellness" element={<Mental />} />
+            <Route path="/services/Hand-Excercise" element={<Excercise />}/>
+            <Route path="/services/Health-Score-Predictor" element={<HealthScore />}/>
+            <Route path="/services/Emotion-detection" element={<EmotionDetection/>}/>
+            <Route path="/services/Search-for-Doctor" element={<DoctorSearch/>}/>
             <Route path="/payment" element={<Payment />} />
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/fitness" element={<Fitness />} /> 

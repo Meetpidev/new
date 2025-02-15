@@ -15,9 +15,9 @@ const data = [
 ];
 
 const statsData = [
-  { label: 'Active Users', value: '50K+', icon: Users },
-  { label: 'Wellness Goals Achieved', value: '100K+', icon: Trophy },
-  { label: 'Success Rate', value: '92%', icon: Target },
+  { label: 'Active Users', value: '50+', icon: Users },
+  { label: 'Wellness Goals Achieved', value: '100+', icon: Trophy },
+  { label: 'Success Rate', value: '60%', icon: Target },
 ];
 
 const Home = () => {
@@ -118,6 +118,23 @@ const Home = () => {
                 title: 'Nutrition Coaching',
                 description: 'Smart meal planning and nutritional advice based on your preferences.'
               }
+              ,
+              {
+                icon: Brain,
+                title: 'Mental Wellness',
+                description: 'Cognitive exercises and meditation guidance for mental clarity.'
+              },
+              {
+                icon: Heart,
+                title: 'Nutrition Coaching',
+                description: 'Smart meal planning and nutritional advice based on your preferences.'
+              }
+              ,
+              {
+                icon: Brain,
+                title: 'Mental Wellness',
+                description: 'Cognitive exercises and meditation guidance for mental clarity.'
+              },
             ].map((feature, index) => (
               <motion.div
                 key={feature.title}
