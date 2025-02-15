@@ -61,10 +61,10 @@ const Services = () => {
       description: 'Emotion detection - face & voice/speech also to add logic for frequent changes',
       //price: '$29/month',
       features: [
-        'Guided meditation',
-        'Stress tracking',
-        'Mood analysis',
-        'Sleep optimization',
+        'Real-time emotion detection',
+      'Voice analysis for stress levels',
+      'Frequent mood change alerts',
+      'Emotion-driven recommendations'
       ],
     },
     {
@@ -73,10 +73,10 @@ const Services = () => {
       description: 'Hand Excersice detection & feedback',
       //price: '$29/month',
       features: [
-        'Guided meditation',
-        'Stress tracking',
-        'Mood analysis',
-        'Sleep optimization',
+      'Exercise detection via camera',
+      'Real-time feedback',
+      'Progress tracking',
+      'Posture improvement tips'
       ],
     },
     {
@@ -85,10 +85,10 @@ const Services = () => {
       description: 'Search Doctor',
       //price: '$29/month',
       features: [
-        'Guided meditation',
-        'Stress tracking',
-        'Mood analysis',
-        'Sleep optimization',
+'Search by specialty',
+      'Location-based results',
+      'Doctor availability filter',
+      'Specialist recommendations'
       ],
     },
     {
@@ -97,10 +97,10 @@ const Services = () => {
       description: 'AI-based reminders for: Vaccinations, Annual health check-ups.',
       // price: '$49/month',
       features: [
-        'Custom workout plans',
-        'Progress tracking',
-        'Form analysis',
-        'Real-time adjustments',
+        'Personalized reminders',
+        'Health check-up alerts',
+        'Vaccination schedules',
+        'Customizable notification settings'
       ],
     },
     {
@@ -109,10 +109,10 @@ const Services = () => {
       description: 'AI translator for varid languages - for user to give in their native language and we will also give results in many language option feature',
       //price: '$39/month',
       features: [
-        'Custom meal plans',
-        'Grocery lists',
-        'Recipe suggestions',
-        'Nutritional analysis',
+        'Real-time language translation',
+        'Multiple language support',
+        'Voice-to-text conversion',
+        'Multilingual medical term dictionary'
       ],
     },
     {
@@ -121,22 +121,22 @@ const Services = () => {
       description: ' self-reported data (sleep hours, diet logs, exercise routines) and outputs a health score model with suggestion feature',
       //price: '$29/month',
       features: [
-        'Guided meditation',
-        'Stress tracking',
-        'Mood analysis',
-        'Sleep optimization',
+'Health score calculation',
+      'Sleep and diet analysis',
+      'Exercise routine tracking',
+      'Personalized improvement suggestions'
       ],
     },
     {
       icon: Meditation,
-      title: 'Sysmptom Checker for various disease',
-      description: 'Sysmptom Checker for various disease',
+      title: 'Symptom Checker for various disease',
+      description: 'Symptom Checker for various disease',
       //price: '$29/month',
       features: [
-        'Guided meditation',
-        'Stress tracking',
-        'Mood analysis',
-        'Sleep optimization',
+        'Symptom input and analysis',
+        'Possible condition predictions',
+        'Matching with specialists',
+        'Health insights and alerts'
       ],
     },
     {
@@ -145,22 +145,22 @@ const Services = () => {
       description: 'other full body excercise detection and Mood Tracking',
       //price: '$29/month',
       features: [
-        'Guided meditation',
-        'Stress tracking',
-        'Mood analysis',
-        'Sleep optimization',
+      'Daily mood logging',
+      'Exercise impact analysis',
+      'Trend analysis over time',
+      'Wellness insights'
       ],
     },
     {
       icon: Meditation,
       title: 'Medical-Report-Based-Disease-Checking',
-      description: 'AI chatbot with empathy-driven conversations',
+      description: 'Medical-Report-Based-Disease-Checking',
       //price: '$29/month',
       features: [
-        'Guided meditation',
-        'Stress tracking',
-        'Mood analysis',
-        'Sleep optimization',
+        'Report scanning and analysis',
+        'Disease prediction',
+        'Health risk indicators',
+        'Doctor consultation recommendations'
       ],
     },
   ];
